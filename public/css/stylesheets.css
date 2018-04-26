@@ -1,4 +1,7 @@
 /* start Global CSS */
+.break-word {
+		word-wrap: break-word;
+}
 
 ul {
 	padding: 0;
@@ -26,29 +29,47 @@ h2 {
 	text-decoration-line: underline;
 }
 
+img {
+	max-width: 100%;
+	height: auto;
+}
+@media \0screen {
+	img { 
+		width: auto; /* for ie 8 */
+	}
+}
+
+input {
+	min-width: 300px;
+}
 /* end Global CSS */
 
 /* start headerTemplate.php */
 
 body {
 	max-width: 100%;
-	min-width: 750px;
+	min-width: 450px;
 	
 	height: 100%;
 	width: 100%;
 	
 	margin: 0px;
-	padding: 0px;
+	padding: 0px;	
 	
-	background-color: aqua;
+	background-color: dimgray;
 }
 
 #page {
+	max-width: 100%;
+	min-width: 450px;
+	
+	height: 100%;
 	width: 100%;
-	height: inherit;
-	max-width: inherit;
-	padding: 0px;
+	
 	margin: 0px;
+	padding: 0px;	
+	
+	background-color: aqua;
 }
 
 #header-container {
@@ -98,15 +119,17 @@ body {
 
 #wrapper {
 	width: 100%;
-	height: 600px;
+	height: 770px;
+	
+	margin-top: 2%;
 }
 
 #nav {
-	width: 200px;
+	width: 10%;
 	height: 100%;
-	max-width: 100%;
+	
 	min-width: 200px;
-
+	
 	position: relative;
 	display: block;
 	float: left;
@@ -120,9 +143,13 @@ body {
 	color: white;
 	background-color: #353638;
 
-	border-radius: 0 20px 20px 0;
-	padding: 7px 20px 20px 7px;
-	margin: 5px 5px 5px 0px;
+	border-radius: 15px;
+	padding: 10px;
+	margin: 5px;
+}
+
+.nav li h2 {
+	margin: 5px 0px 5px 0px;
 }
 
 .sub-nav {}
@@ -132,7 +159,7 @@ body {
 .sub-nav li {
 	background-color: dimgray;
 
-	padding: 4px 0px 4px 4px;
+	padding: 4px;
 	margin: 2px 0px 2px 0px;
 
 	-webkit-text-decoration: none !imporant;
@@ -156,22 +183,25 @@ body {
 
 #content-container {
 	max-width: 100%;
-	min-width: 450px;
+	min-width: 250px;
 	
-	max-height: auto;
-	min-height: 500px;
-
-	width: 100%;
-
-	margin-left: 200px;
+	width: 80%;
+	height: 400px;
 	
-	background-color: beige;
-	z-index: 0;
+	
+	float: left;
+	z-index: 1;
 }
 
 #content {
-	padding-left: 25px;
-	padding-top: 25px;
+	width: 100%;
+	
+	padding: 25px;
+
+	margin-left: 4%;
+	margin-right: 4%;
+	
+	background-color: beige;
 }
 
 /* end contentTemplate.php */
@@ -179,19 +209,24 @@ body {
 /* start footerTemplate.php */
 
 #footer-container {
-	position: fixed;
-	display: block;
-	float: left;
 	width: 100%;
 	height: 35px;
-	bottom: 0px;
-	background-color: dimgray;
+	
+	bottom:0px;
+	
 	overflow: hidden;
+	position: relative;
+	
+
 }
 
 #footer {
+	height: 35px;
+	
+	margin-top: 5px;
+	
 	text-align: center;
-	padding-top: 5px;
+
 }
 
 /* end footerTemplate.php */
